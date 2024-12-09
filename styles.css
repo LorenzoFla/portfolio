@@ -127,8 +127,7 @@ h2 {
 /* Grille des compétences */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 20px; /* Espacement entre les images */
     justify-items: center; /* Centre les images horizontalement */
     align-items: center; /* Centre les images verticalement */
@@ -147,6 +146,30 @@ h2 {
 .skill-img:hover {
     transform: scale(1.5) translateY(-10px) rotate(5deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Une seule colonne avec des images plus petites */
+    }
+
+    .skill-img {
+        width: 80px; /* Réduit la taille des images */
+        height: 80px;
+    }
+}
+
+/* Pour les tablettes (entre 600px et 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    }
+
+    .skill-img {
+        width: 90px; /* Réduit la taille des images pour les tablettes */
+        height: 90px;
+    }
 }
 
 
