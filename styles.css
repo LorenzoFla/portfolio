@@ -127,7 +127,7 @@ h2 {
 /* Grille des compétences */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     gap: 20px; /* Espacement entre les images */
     justify-items: center; /* Centre les images horizontalement */
