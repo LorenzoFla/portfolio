@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Informatique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="particles-js"></div> <!-- Conteneur pour les particules -->
+        <div class="container">
+            <h1>Lorenzo Flagothier</h1>
+            <div id="text-container"></div>
+            <p id="dynamic-text">Développeur Web | Ingénieur Logiciel</p>
+        </div>
+        <div class="nmdiv">
+            <div class="nmode">
+                <!-- Conteneur pour la checkbox et le label -->
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="checkbox-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <span class="ball"></span>
+                    </label>
+                </div>
+                <!-- Texte sous la checkbox -->
+                <p class="checkbox-text">Night Mode</p>
+            </div>
+        </div>              
+        </div>
+        
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#Éxperiences">Éxperiences</a></li>
+            <li><a href="#skills">Compétences</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>
+                Actuellement en 2ᵉ année de BUT Informatique, je développe mes compétences en programmation, en gestion de projets, et en technologies web. 
+                Passionné par l'informatique et curieux de nature, j'aime relever des défis et apprendre de nouvelles technologies, notamment en développement logiciel et en analyse de données.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projets</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Gestionnaire de Tâches</h3>
+                    <p>Application pour organiser vos tâches quotidiennes. Techno : React, Node.js.</p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="card">
+                    <h3>Portfolio Interactif</h3>
+                    <p>Site web interactif mettant en valeur vos projets. Techno : HTML, CSS, JavaScript.</p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="card">
+                    <h3>Analyseur de Données</h3>
+                    <p>Outil de visualisation des données. Techno : Python, Pandas, Matplotlib.</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation">
+        <div class="container">
+            <h2>Formations</h2>
+            <div class="formation-item">
+                <img src="img/Bac.png" alt="Bac NSI, Maths" class="formation-img">
+                <div class="formation-content">
+                    <h3>Bac NSI, Maths, Maths Expert</h3>
+                    <p>Formation scientifique axée sur les mathématiques avancées et les sciences informatiques.</p>
+                </div>
+            </div>
+            <div class="formation-item reverse">
+                <img src="img/iut.png" alt="BUT Informatique" class="formation-img">
+                <div class="formation-content">
+                    <h3>BUT Informatique</h3>
+                    <p>Formation en informatique à l'IUT de Lille, couvrant les domaines du développement, de l'algorithmique, et de la gestion de projets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Éxperiences">
+        <div class="container">
+            <h2>Éxperiences</h2>
+            <div class="Éxperiences-item">
+                <img src="img/kiyosato rock.png" alt="kiyosato rock" class="Éxperiences-img">
+                <div class="Éxperiences-content">
+                    <h3>Serveur en restauration au japon</h3>
+                    <p>Serveur au restaurant ROCK de Moegi no mura. Expérience dans la prise de commandes, le service en salle et la gestion des clients dans une langue etrangère.</p>
+                    <p>Rock 清里 moeginomura</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <img src="img/html.png" alt="HTML" class="skill-img">
+                <img src="img/css.png" alt="CSS" class="skill-img">
+                <img src="img/js.png" alt="JavaScript" class="skill-img">
+                <img src="img/python.png" alt="Python" class="skill-img">
+                <img src="img/java.png" alt="java" class="skill-img">
+                <img src="img/psql.png" alt="psql" class="skill-img">
+                <img src="img/git.png" alt="git" class="skill-img">
+                <img src="img/bash.png" alt="bash" class="skill-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="fun-button">
+        <div class="container">
+            <button id="magic-button">Cliquez-moi !</button>
+        </div>
+    </section>
+    
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lorenzo Flagothier. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

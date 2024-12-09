@@ -1,0 +1,418 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    overflow: hidden; /* Empêche les particules de dépasser */
+    background: #301934; /* Couleur de fond du header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    min-height: 200px; /* Assure une hauteur suffisante pour les particules */
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #301934;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #301934;
+}
+/* Section formations */
+#formation, #Éxperiences {
+    padding: 40px 0;
+}
+
+#formation h2, #Éxperiences h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Conteneur de chaque formation */
+.formation-item, .Éxperiences-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formation-item.reverse, .Éxperiences-item.reverse {
+    flex-direction: row-reverse; /* Inverse l'ordre pour alterner l'image et le texte */
+}
+
+/* Image associée à chaque formation */
+.formation-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Assure que l'image garde une bonne proportion */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    margin-right: 20px;
+}
+
+.formation-item.reverse .formation-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Texte des formations */
+.formation-content {
+    max-width: 70%;
+}
+
+.formation-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.formation-content p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.Éxperiences-img{
+    margin-right: 20px;
+}
+
+/* Section Compétences */
+#skills {
+    padding: 40px 0;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grille des compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px; /* Espacement entre les images */
+    justify-items: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+}
+
+/* Images des compétences */
+.skill-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Préserve les proportions de l'image */
+    border-radius: 10px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet au survol */
+}
+
+/* Effet au survol */
+.skill-img:hover {
+    transform: scale(1.5) translateY(-10px) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(187, 134, 252, 0.2);
+    z-index: 1;
+}
+
+.card h3 {
+    color: #301934;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #301934;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0041a8;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode nav {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .card {
+    background-color: #1f1f1f;
+    border-color: #333;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #bb86fc; /* Violet clair adapté au fond sombre */
+}
+
+body.dark-mode form button {
+    background: #bb86fc; /* Bouton en violet clair */
+    color: #121212; /* Texte du bouton en noir pour le contraste */
+}
+
+body.dark-mode form button:hover {
+    background: #9a67ea; /* Violet légèrement plus foncé au survol */
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #bb86fc; /* Liens survolés en violet clair */
+}
+
+
+
+/* Conteneur principal */
+.nmdiv {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    flex-direction: column; /* Empile verticalement */
+}
+
+/* Conteneur de la checkbox */
+.nmode {
+    display: flex;
+    flex-direction: column; /* Place les éléments verticalement */
+    align-items: center; /* Centre horizontalement */
+    gap: 10px; /* Espace entre les éléments */
+}
+
+/* Checkbox existante */
+.nmode .checkbox {
+    opacity: 0; /* Cache la vraie checkbox */
+    position: absolute; /* Permet un design personnalisé */
+}
+
+.nmode .checkbox-label {
+    background-color: #111; /* Fond de la case */
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-label .ball {
+    background-color: #fff; /* Couleur de la boule */
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px); /* Déplacement de la boule */
+}
+
+/* Texte sous la checkbox */
+.checkbox-text {
+    margin-top: 0.5px; /* Espace entre le label et le texte */
+    font-size: 14px; /* Taille du texte */
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+}
+
+/* Mode sombre adapté */
+body.dark-mode .checkbox-text {
+    color: #bb86fc; /* Violet clair pour le mode sombre */
+}
+
+/* Mode arc-en-ciel : tout le site */
+body.rainbow-mode {
+    animation: rainbow-bg 2s infinite; /* Animation sur l'arrière-plan */
+    color: white; /* Texte blanc pour le contraste */
+}
+
+body.rainbow-mode * {
+    animation: rainbow-text 2s infinite; /* Animation sur tous les éléments */
+    background: none; /* Supprime les fonds pour ne garder que les couleurs */
+}
+
+/* Arrière-plan arc-en-ciel */
+@keyframes rainbow-bg {
+    0% { background-color: red; }
+    16% { background-color: orange; }
+    33% { background-color: yellow; }
+    50% { background-color: green; }
+    66% { background-color: blue; }
+    83% { background-color: indigo; }
+    100% { background-color: violet; }
+}
+
+
+/* Boutons et zones spécifiques */
+
+
+body.rainbow-mode .card {
+    animation: rainbow-border 2s infinite; /* Animation sur les bordures et les fonds */
+}
+
+/* Animation des bordures et fonds */
+@keyframes rainbow-border {
+    0% { border-color: red; background-color: rgba(255, 0, 0, 0.3); }
+    16% { border-color: orange; background-color: rgba(255, 165, 0, 0.3); }
+    33% { border-color: yellow; background-color: rgba(255, 255, 0, 0.3); }
+    50% { border-color: green; background-color: rgba(0, 128, 0, 0.3); }
+    66% { border-color: blue; background-color: rgba(0, 0, 255, 0.3); }
+    83% { border-color: indigo; background-color: rgba(75, 0, 130, 0.3); }
+    100% { border-color: violet; background-color: rgba(238, 130, 238, 0.3); }
+}
+#magic-button {
+    display: none; /* Cacher le bouton par défaut */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #301934;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#magic-button:hover {
+    background-color: #bb86fc;
+}
+
+
+#fun-button {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#magic-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #301934;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#magic-button:hover {
+    background-color: #bb86fc;
+}
+
+/* Animation quand le bouton fuit */
+#magic-button.moving {
+    position: absolute;
+    transition: transform 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
