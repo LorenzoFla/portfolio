@@ -4,8 +4,8 @@ const phrases = ["Développeur en devenir", "Passionné par l'informatique", "Cr
 let phraseIndex = 0; // Index de la phrase actuelle
 let charIndex = 0;   // Position actuelle dans la phrase
 let isDeleting = false; // Indique si on est en train d'effacer
-const typingSpeed = 100; // Vitesse de frappe
-const pauseEnd = 100;   // Pause après la fin d'une phrase
+const typingSpeed = 200; // Vitesse de frappe
+const pauseEnd = 1000;   // Pause après la fin d'une phrase
 
 function typeEffect() {
     const currentPhrase = phrases[phraseIndex];
