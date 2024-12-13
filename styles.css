@@ -60,6 +60,14 @@ h2 {
     margin-bottom: 20px;
     color: #301934;
 }
+/* Section projets */
+
+#projects p {
+    text-align: justify; /* Justifie le texte */
+    line-height: 1.6;    /* Améliore la lisibilité avec un espacement entre les lignes */
+    margin: 5px 10px;      /* Ajoute un peu d'espace autour du paragraphe */
+}
+
 /* Section formations */
 #formation, #Éxperiences {
     padding: 40px 0;
