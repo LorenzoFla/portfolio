@@ -258,6 +258,9 @@ footer {
 footer a{
     color: #ddd;
 }
+footer a:visited{
+    color: #6d6c6c;
+}
 
 /* Mode sombre */
 body.dark-mode {
