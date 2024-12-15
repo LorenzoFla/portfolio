@@ -67,6 +67,10 @@ h2 {
     line-height: 1.6;    /* Améliore la lisibilité avec un espacement entre les lignes */
     margin: 5px 10px;      /* Ajoute un peu d'espace autour du paragraphe */
 }
+#projects a{
+    position: relative; /* S'assure que le lien reste au-dessus des autres éléments */
+    z-index: 10; /* Donne une priorité de clic au lien */
+}
 
 /* Section formations */
 #formation, #Éxperiences {
@@ -250,6 +254,9 @@ footer {
     color: #fff;
     padding: 10px 0;
     margin-top: 20px;
+}
+footer a{
+    color: #ddd;
 }
 
 /* Mode sombre */
