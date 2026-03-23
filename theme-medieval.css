@@ -1,0 +1,377 @@
+/* ══════════════════════════════════════
+   THÈME — MÉDIÉVAL
+   Pierre, parchemin, forge, runes, bordeaux, or chaud
+══════════════════════════════════════ */
+
+[data-theme="medieval"] {
+    --bg:        #0a0705;
+    --bg2:       #110e08;
+    --bg3:       #16120a;
+    --violet:    #8b2a2a;
+    --violet-m:  #b03535;
+    --violet-l:  #d4845a;
+    --violet-xl: #e8b89a;
+    --gold:      #c9922a;
+    --gold-l:    #e8b84a;
+    --rose:      #9e4a4a;
+    --text:      #f0e8d8;
+    --text-soft: #a08060;
+    --text-dim:  #4a3820;
+    --border:    rgba(201,146,42,0.18);
+    --border-h:  rgba(201,146,42,0.45);
+    --glow:      rgba(139,42,42,0.5);
+}
+
+[data-theme="medieval"] body {
+    background: var(--bg);
+}
+
+/* Orbes feu de forge */
+[data-theme="medieval"] .orb-1 {
+    background: radial-gradient(circle, rgba(139,42,42,0.5) 0%, transparent 65%);
+}
+[data-theme="medieval"] .orb-2 {
+    background: radial-gradient(circle, rgba(80,30,10,0.6) 0%, transparent 65%);
+}
+[data-theme="medieval"] .orb-3 {
+    background: radial-gradient(circle, rgba(201,146,42,0.2) 0%, transparent 65%);
+}
+
+/* Starfield — teinte ambrée */
+[data-theme="medieval"] #starfield { filter: sepia(0.6) hue-rotate(15deg) saturate(0.7) brightness(0.75); }
+[data-theme="medieval"] canvas:not(#starfield) { filter: sepia(0.4) hue-rotate(10deg); }
+
+/* Nav */
+[data-theme="medieval"] nav {
+    background: rgba(10,7,5,0.9);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+}
+[data-theme="medieval"] nav ul li a::after {
+    background: linear-gradient(90deg, var(--gold), var(--violet-l));
+}
+
+/* Titres */
+[data-theme="medieval"] .ht-last {
+    background: linear-gradient(115deg, var(--gold) 0%, var(--violet-l) 55%, var(--gold-l) 100%);
+    -webkit-background-clip: text; background-clip: text;
+}
+[data-theme="medieval"] h2.s-title em {
+    background: linear-gradient(90deg, var(--gold), var(--violet-l));
+    -webkit-background-clip: text; background-clip: text;
+}
+
+/* Hero badge */
+[data-theme="medieval"] .hero-badge {
+    border-color: rgba(201,146,42,0.35);
+    color: var(--gold);
+    background: rgba(201,146,42,0.07);
+}
+[data-theme="medieval"] .hero-badge-dot { background: var(--gold); }
+
+/* Buttons */
+[data-theme="medieval"] .btn-main {
+    background: linear-gradient(135deg, var(--violet) 0%, #6a1e1e 100%);
+    box-shadow: 0 4px 28px rgba(139,42,42,0.5);
+}
+[data-theme="medieval"] .btn-main:hover { box-shadow: 0 10px 44px rgba(139,42,42,0.7); }
+[data-theme="medieval"] .btn-ghost {
+    border-color: rgba(201,146,42,0.3);
+    color: var(--gold);
+}
+[data-theme="medieval"] .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold-l);
+    background: rgba(201,146,42,0.06);
+}
+
+/* Cards projet */
+[data-theme="medieval"] .proj {
+    background: linear-gradient(155deg, rgba(139,42,42,0.07) 0%, rgba(10,7,5,0.75) 100%);
+    border-color: rgba(201,146,42,0.15);
+}
+[data-theme="medieval"] .proj:hover {
+    border-color: rgba(201,146,42,0.45);
+    box-shadow: 0 28px 70px rgba(139,42,42,0.2);
+}
+[data-theme="medieval"] .proj::before {
+    background: linear-gradient(90deg, transparent, var(--gold), var(--violet-l), transparent);
+}
+[data-theme="medieval"] .proj.featured {
+    border-color: rgba(201,146,42,0.4);
+    background: linear-gradient(155deg, rgba(139,42,42,0.1) 0%, rgba(201,146,42,0.06) 100%);
+}
+
+/* Tags */
+[data-theme="medieval"] .tag {
+    border-color: rgba(201,146,42,0.3);
+    color: var(--gold-l);
+    background: rgba(201,146,42,0.08);
+}
+
+/* Skills */
+[data-theme="medieval"] .skill {
+    background: linear-gradient(145deg, rgba(139,42,42,0.08), rgba(10,7,5,0.55));
+}
+[data-theme="medieval"] .skill:hover {
+    border-color: rgba(201,146,42,0.5);
+    box-shadow: 0 16px 40px rgba(139,42,42,0.25);
+}
+
+/* Timeline */
+[data-theme="medieval"] .tl-dot {
+    border-color: var(--gold);
+    box-shadow: 0 0 18px rgba(201,146,42,0.5);
+}
+[data-theme="medieval"] .timeline {
+    border-left-color: rgba(201,146,42,0.2);
+}
+
+/* Stats */
+[data-theme="medieval"] .stat-val {
+    background: linear-gradient(135deg, var(--gold), var(--violet-l));
+    -webkit-background-clip: text; background-clip: text;
+}
+
+/* Contact */
+[data-theme="medieval"] .cc { background: rgba(201,146,42,0.05); }
+[data-theme="medieval"] .cc:hover {
+    border-color: rgba(201,146,42,0.5);
+    background: rgba(201,146,42,0.1);
+}
+
+/* Texture parchemin/pierre en fond */
+[data-theme="medieval"] body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0; opacity: 0.6;
+}
+
+/* Runes décoratives dans les coins */
+[data-theme="medieval"] body::after {
+    content: '᛫ ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ ᚺ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛞ ᛟ ᛫';
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 28px;
+    font-size: 0.65rem;
+    color: rgba(201,146,42,0.12);
+    letter-spacing: 0.3em;
+    text-align: center;
+    pointer-events: none; z-index: 0;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Eyebrows — style rune */
+[data-theme="medieval"] .s-eyebrow {
+    color: var(--gold);
+    letter-spacing: 0.3em;
+}
+
+/* Dynamic text */
+[data-theme="medieval"] #dynamic-text { color: var(--gold); }
+
+/* Proj link */
+[data-theme="medieval"] .proj-link { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   BOUTONS — MÉDIÉVAL — Parchemin qui brûle
+   Vieux papier aux bords calcinés · Encre dorée
+   Flammes qui lèchent les côtés au hover
+══════════════════════════════════════ */
+@keyframes parchment-burn-l {
+    0%   { opacity:0; transform: scaleY(0.3) translateX(0);   filter: blur(2px); }
+    40%  { opacity:1; transform: scaleY(1)   translateX(-2px); filter: blur(0); }
+    100% { opacity:0; transform: scaleY(1.4) translateX(-4px); filter: blur(1px); }
+}
+@keyframes parchment-burn-r {
+    0%   { opacity:0; transform: scaleY(0.3) translateX(0);   filter: blur(2px); }
+    40%  { opacity:1; transform: scaleY(1)   translateX(2px);  filter: blur(0); }
+    100% { opacity:0; transform: scaleY(1.4) translateX(4px);  filter: blur(1px); }
+}
+@keyframes ember-float {
+    0%   { opacity:0; transform:translate(var(--ex),0)       scale(1);   }
+    20%  { opacity:0.9; }
+    100% { opacity:0; transform:translate(var(--ex),-36px)   scale(0.3); }
+}
+@keyframes ink-glow {
+    0%,100% { text-shadow: 0 1px 2px rgba(0,0,0,0.8), 0 0 0 transparent; }
+    50%      { text-shadow: 0 1px 2px rgba(0,0,0,0.8), 0 0 14px rgba(220,160,40,0.65); }
+}
+@keyframes wax-drip {
+    0%   { transform: scaleY(0); transform-origin: top; opacity:1; }
+    100% { transform: scaleY(1); transform-origin: top; opacity:1; }
+}
+@keyframes seal-appear {
+    0%   { transform: translate(-50%,-50%) scale(0) rotate(-30deg); opacity:0; }
+    60%  { transform: translate(-50%,-50%) scale(1.15) rotate(5deg); opacity:1; }
+    100% { transform: translate(-50%,-50%) scale(1)    rotate(0deg); opacity:1; }
+}
+
+[data-theme="medieval"] .btn {
+    position: relative;
+    overflow: visible;
+}
+
+[data-theme="medieval"] .btn-main {
+    /* Parchemin vieilli — tons chauds, irréguliers */
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(80,40,10,0.6) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 70%, rgba(60,20,5,0.5)  0%, transparent 50%),
+        linear-gradient(160deg, #3a1c08 0%, #6b3510 30%, #8b4a18 55%, #7a3a10 75%, #4a1e06 100%);
+    border-radius: 1px 4px 2px 3px; /* Légèrement irrégulier */
+    color: #e8c878;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    /* Bords brûlés simulés */
+    border-top:    1px solid rgba(180,100,20,0.45);
+    border-left:   1px solid rgba(140,70,10,0.35);
+    border-right:  1px solid rgba(30,10,0,0.80);
+    border-bottom: 2px solid rgba(20,8,0,0.90);
+    box-shadow:
+        /* Profondeur */
+        0 4px 12px rgba(0,0,0,0.65),
+        0 8px 24px rgba(80,30,0,0.35),
+        /* Teinte chaleureuse */
+        0 0 40px rgba(160,80,0,0.10),
+        /* Bord brûlé intérieur */
+        inset 1px 1px 0 rgba(220,160,50,0.18),
+        inset -1px -1px 0 rgba(0,0,0,0.50),
+        inset 0 0 30px rgba(0,0,0,0.40);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 18px rgba(220,150,30,0);
+    transition: text-shadow 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Ligne décorative en haut — encre vieillie */
+[data-theme="medieval"] .btn-main::before {
+    content: '— ✦ —';
+    position: absolute;
+    top: -20px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.45rem;
+    letter-spacing: 0.4em;
+    color: rgba(180,130,30,0);
+    pointer-events: none;
+    white-space: nowrap;
+    transition: color 0.4s;
+    font-family: serif;
+}
+
+/* Sceau de cire en bas */
+[data-theme="medieval"] .btn-main::after {
+    content: '✦';
+    position: absolute;
+    bottom: -14px; left: 50%;
+    transform: translate(-50%, 0) scale(0);
+    font-size: 1.1rem;
+    color: rgba(180,30,30,0);
+    text-shadow: none;
+    pointer-events: none;
+    transition: none;
+}
+
+[data-theme="medieval"] .btn-main:hover {
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(120,50,10,0.7) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 70%, rgba(100,30,5,0.6)  0%, transparent 50%),
+        linear-gradient(160deg, #4a2408 0%, #7c3e10 30%, #a05520 55%, #8c4212 75%, #5a2406 100%);
+    border-top-color:   rgba(240,160,40,0.70);
+    border-left-color:  rgba(200,110,20,0.50);
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.65),
+        0 8px 28px rgba(140,60,0,0.55),
+        0 0 70px rgba(200,100,0,0.20),
+        0 0 120px rgba(200,80,0,0.08),
+        inset 1px 1px 0 rgba(255,190,60,0.28),
+        inset -1px -1px 0 rgba(0,0,0,0.55),
+        inset 0 0 30px rgba(0,0,0,0.35);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 18px rgba(220,150,30,0.7);
+    transform: translateY(-2px);
+    animation: ink-glow 1.8s ease-in-out infinite;
+}
+
+/* Décoration qui apparaît */
+[data-theme="medieval"] .btn-main:hover::before {
+    color: rgba(180,130,30,0.65);
+}
+
+/* Flammes sur les côtés */
+/* Flamme gauche */
+[data-theme="medieval"] .btn-main:hover ~ * { pointer-events: none; } /* pas de side effects */
+
+/* On simule les flammes via outline animé coloré */
+[data-theme="medieval"] .btn-main:hover::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 3px;
+    background: none;
+    /* Lueur de braise sur les bords */
+    box-shadow:
+        -4px 0   8px  rgba(255,100,0,0.55),
+         4px 0   8px  rgba(255,120,0,0.45),
+         0  -3px 6px  rgba(255,160,40,0.40),
+         0   4px 10px rgba(180,60,0,0.50);
+    border: 1px solid rgba(255,140,20,0.25);
+    pointer-events: none;
+    font-size: 0;
+    color: transparent;
+    animation: parchment-burn-l 0.5s ease-out forwards;
+    transform: none;
+    bottom: auto; left: auto; transform: none;
+}
+
+[data-theme="medieval"] .btn-ghost {
+    border-radius: 2px 5px 2px 4px;
+    background: rgba(30,12,2,0.60);
+    border-top:    1px solid rgba(180,120,30,0.40);
+    border-left:   1px solid rgba(140,90,20,0.25);
+    border-right:  1px solid rgba(20,8,0,0.70);
+    border-bottom: 2px solid rgba(10,4,0,0.80);
+    color: #c9922a;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    backdrop-filter: blur(4px);
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.55),
+        inset 0 0 20px rgba(0,0,0,0.30),
+        inset 0 1px 0 rgba(200,140,40,0.12);
+}
+/* Ornement cornes en coin */
+[data-theme="medieval"] .btn-ghost::before {
+    content: '◈';
+    position: absolute;
+    top: -2px; left: 6px;
+    font-size: 0.45rem;
+    color: rgba(180,120,30,0.35);
+    pointer-events: none;
+    transition: color 0.3s;
+}
+[data-theme="medieval"] .btn-ghost::after {
+    content: '◈';
+    position: absolute;
+    bottom: -2px; right: 6px;
+    font-size: 0.45rem;
+    color: rgba(180,120,30,0.35);
+    pointer-events: none;
+    transition: color 0.3s;
+}
+[data-theme="medieval"] .btn-ghost:hover {
+    border-top-color:   rgba(240,170,50,0.65);
+    border-left-color:  rgba(200,130,30,0.40);
+    color: var(--gold-l);
+    background: rgba(55,22,4,0.72);
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.55),
+        0 0 28px rgba(180,100,0,0.25),
+        0 0 60px rgba(180,80,0,0.10),
+        inset 0 0 22px rgba(180,80,0,0.08),
+        inset 0 1px 0 rgba(255,180,50,0.22);
+    text-shadow: 0 0 12px rgba(220,150,30,0.55);
+    transform: translateY(-1px);
+}
+[data-theme="medieval"] .btn-ghost:hover::before,
+[data-theme="medieval"] .btn-ghost:hover::after {
+    color: rgba(220,160,40,0.70);
+}

@@ -1,0 +1,348 @@
+/* ══════════════════════════════════════
+   THÈME — ABYSSAL
+   Profondeurs océaniques · bioluminescence · ténèbres bleues
+   Débloqué en cliquant 3x sur la même réponse dans le quiz
+══════════════════════════════════════ */
+
+[data-theme="abyssal"] {
+    --bg:        #010810;
+    --bg2:       #020d1a;
+    --bg3:       #031120;
+    --violet:    #005fa8;
+    --violet-m:  #0080c0;
+    --violet-l:  #00c4f5;
+    --violet-xl: #80e4ff;
+    --gold:      #00f0c0;
+    --gold-l:    #80ffe8;
+    --rose:      #3a80ff;
+    --text:      #cceeff;
+    --text-soft: #6aaac8;
+    --text-dim:  #183c58;
+    --border:    rgba(0,196,245,0.14);
+    --border-h:  rgba(0,196,245,0.44);
+    --glow:      rgba(0,140,240,0.5);
+}
+
+[data-theme="abyssal"] body { background: var(--bg); }
+
+/* ── Orbes bioluminescentes ── */
+[data-theme="abyssal"] .orb-1 {
+    background: radial-gradient(circle, rgba(0,90,190,0.42) 0%, transparent 65%);
+}
+[data-theme="abyssal"] .orb-2 {
+    background: radial-gradient(circle, rgba(0,196,245,0.22) 0%, transparent 65%);
+}
+[data-theme="abyssal"] .orb-3 {
+    background: radial-gradient(circle, rgba(0,240,180,0.14) 0%, transparent 65%);
+}
+
+/* ── Nav ── */
+[data-theme="abyssal"] nav {
+    background: rgba(1,8,16,0.93);
+    border-bottom: 1px solid rgba(0,196,245,0.14);
+    box-shadow: 0 0 30px rgba(0,140,240,0.05);
+}
+[data-theme="abyssal"] nav ul li a::after {
+    background: linear-gradient(90deg, var(--violet-l), var(--gold));
+}
+
+/* ── Titres ── */
+[data-theme="abyssal"] .ht-last {
+    background: linear-gradient(115deg, #00c4f5 0%, #00f0c0 55%, #3a80ff 100%);
+    -webkit-background-clip: text; background-clip: text;
+}
+[data-theme="abyssal"] .ht-name {
+    text-shadow: 0 0 40px rgba(0,196,245,0.18);
+}
+[data-theme="abyssal"] h2.s-title em {
+    background: linear-gradient(90deg, #00c4f5, #00f0c0);
+    -webkit-background-clip: text; background-clip: text;
+}
+
+/* ── Hero badge ── */
+[data-theme="abyssal"] .hero-badge {
+    border-color: rgba(0,196,245,0.28);
+    color: var(--violet-l);
+    background: rgba(0,196,245,0.06);
+}
+[data-theme="abyssal"] .hero-badge-dot {
+    background: var(--violet-l);
+    box-shadow: 0 0 10px rgba(0,196,245,0.8);
+}
+
+/* ── Boutons ── */
+[data-theme="abyssal"] .btn-main {
+    background: linear-gradient(135deg, #00508a 0%, #0072aa 100%);
+    box-shadow: 0 4px 28px rgba(0,140,240,0.45);
+}
+[data-theme="abyssal"] .btn-main:hover {
+    box-shadow: 0 10px 44px rgba(0,196,245,0.6);
+}
+[data-theme="abyssal"] .btn-ghost {
+    border-color: rgba(0,196,245,0.28);
+    color: var(--violet-l);
+}
+[data-theme="abyssal"] .btn-ghost:hover {
+    border-color: var(--violet-l);
+    color: var(--text);
+    background: rgba(0,196,245,0.07);
+    box-shadow: 0 0 20px rgba(0,196,245,0.18);
+}
+
+/* ── Cartes projets ── */
+[data-theme="abyssal"] .proj {
+    background: linear-gradient(155deg, rgba(0,90,190,0.08) 0%, rgba(1,8,16,0.8) 100%);
+    border-color: rgba(0,196,245,0.12);
+}
+[data-theme="abyssal"] .proj:hover {
+    border-color: rgba(0,196,245,0.4);
+    box-shadow: 0 0 60px rgba(0,196,245,0.1), 0 0 120px rgba(0,130,240,0.06);
+}
+[data-theme="abyssal"] .proj::before {
+    background: linear-gradient(90deg, transparent, #00c4f5, #00f0c0, transparent);
+}
+[data-theme="abyssal"] .proj.featured {
+    border-color: rgba(0,240,180,0.32);
+    background: linear-gradient(155deg, rgba(0,90,190,0.1) 0%, rgba(0,240,180,0.04) 100%);
+}
+[data-theme="abyssal"] .proj.featured:hover {
+    border-color: rgba(0,240,180,0.55);
+}
+
+/* ── Reflet holographique Abyssal ── */
+[data-theme="abyssal"] .proj-holo {
+    background: radial-gradient(circle at 50% 50%,
+        rgba(0,196,245,0.18) 0%, rgba(0,240,180,0.08) 35%, transparent 68%);
+}
+
+/* ── Tags ── */
+[data-theme="abyssal"] .tag {
+    border-color: rgba(0,196,245,0.26);
+    color: var(--violet-xl);
+    background: rgba(0,196,245,0.07);
+}
+
+/* ── Skills ── */
+[data-theme="abyssal"] .skill {
+    background: linear-gradient(145deg, rgba(0,90,190,0.07), rgba(1,8,16,0.6));
+}
+[data-theme="abyssal"] .skill:hover {
+    border-color: rgba(0,196,245,0.5);
+    box-shadow: 0 16px 40px rgba(0,196,245,0.18);
+}
+
+/* ── Timeline ── */
+[data-theme="abyssal"] .tl-dot {
+    border-color: var(--violet-l);
+    box-shadow: 0 0 18px rgba(0,196,245,0.6);
+}
+[data-theme="abyssal"] .timeline {
+    border-left-color: rgba(0,196,245,0.18);
+}
+[data-theme="abyssal"] .tl-item.highlight-item .tl-dot {
+    border-color: var(--gold);
+    box-shadow: 0 0 18px rgba(0,240,180,0.6);
+}
+
+/* ── Stats ── */
+[data-theme="abyssal"] .stat-val {
+    background: linear-gradient(135deg, #00c4f5, #00f0c0);
+    -webkit-background-clip: text; background-clip: text;
+}
+[data-theme="abyssal"] .stat {
+    background: linear-gradient(140deg, rgba(0,90,190,0.1), rgba(0,90,190,0.02));
+}
+
+/* ── Contact ── */
+[data-theme="abyssal"] .cc { background: rgba(0,196,245,0.05); }
+[data-theme="abyssal"] .cc:hover {
+    border-color: rgba(0,196,245,0.45);
+    background: rgba(0,196,245,0.1);
+    box-shadow: 0 0 20px rgba(0,196,245,0.14);
+}
+
+/* ── Textes thème ── */
+[data-theme="abyssal"] #dynamic-text  { color: var(--violet-l); }
+[data-theme="abyssal"] .proj-link     { color: var(--gold); }
+[data-theme="abyssal"] .proj-link:hover { color: var(--gold-l); }
+[data-theme="abyssal"] .tl-date {
+    color: var(--gold);
+    border-color: rgba(0,240,180,0.22);
+    background: rgba(0,240,180,0.05);
+}
+[data-theme="abyssal"] .s-eyebrow {
+    color: var(--violet-l);
+    text-shadow: 0 0 14px rgba(0,196,245,0.45);
+}
+[data-theme="abyssal"] .proj-badge {
+    color: var(--gold);
+    border-color: rgba(0,240,180,0.28);
+    background: rgba(0,240,180,0.06);
+}
+[data-theme="abyssal"] .proj-badge-dot { background: var(--gold); }
+
+/* ── Scanlines vagues (pression de l'eau) ── */
+[data-theme="abyssal"] body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px, transparent 7px,
+        rgba(0,196,245,0.006) 7px, rgba(0,196,245,0.006) 8px
+    );
+    pointer-events: none; z-index: 0;
+}
+
+/* ══════════════════════════════════════
+   BOUTONS — ABYSSAL — Organisme des profondeurs
+   Membrane bioluminescente · Tentacules · Pression abyssale
+══════════════════════════════════════ */
+@keyframes biolum-pulse {
+    0%,100% {
+        box-shadow:
+            0 0 12px rgba(0,196,245,0.35),
+            0 0 40px rgba(0,196,245,0.12),
+            0 0 80px rgba(0,140,240,0.06),
+            inset 0 0 18px rgba(0,240,200,0.06);
+    }
+    33% {
+        box-shadow:
+            0 0 18px rgba(0,240,200,0.50),
+            0 0 55px rgba(0,240,200,0.18),
+            0 0 90px rgba(0,200,180,0.08),
+            inset 0 0 22px rgba(0,240,200,0.10);
+    }
+    66% {
+        box-shadow:
+            0 0 15px rgba(58,128,255,0.45),
+            0 0 45px rgba(58,128,255,0.15),
+            0 0 85px rgba(58,128,255,0.07),
+            inset 0 0 20px rgba(58,128,255,0.08);
+    }
+}
+@keyframes membrane-ripple {
+    0%   { transform: scale(1,1);    border-radius: 12px; }
+    25%  { transform: scale(1.02,.97); border-radius: 14px 10px 13px 11px; }
+    50%  { transform: scale(.98,1.02); border-radius: 11px 13px 10px 14px; }
+    75%  { transform: scale(1.01,.99); border-radius: 13px 11px 14px 10px; }
+    100% { transform: scale(1,1);    border-radius: 12px; }
+}
+@keyframes deep-bubble {
+    0%   { transform: translate(var(--bx,0px), 0) scale(0.6);  opacity: 0; }
+    15%  { opacity: 0.7; }
+    100% { transform: translate(var(--bx,0px), -38px) scale(1.3); opacity: 0; }
+}
+@keyframes pressure-wave {
+    0%   { transform: scale(1);   opacity: 0.6; }
+    100% { transform: scale(2.8); opacity: 0; }
+}
+@keyframes tentacle-sway {
+    0%,100% { transform: scaleX(1) rotate(0deg); }
+    30%     { transform: scaleX(1.04) rotate(0.8deg); }
+    70%     { transform: scaleX(0.97) rotate(-0.6deg); }
+}
+
+[data-theme="abyssal"] .btn {
+    position: relative;
+    overflow: visible;
+}
+
+[data-theme="abyssal"] .btn-main {
+    background: linear-gradient(160deg,
+        #001428 0%,
+        #003a6e 35%,
+        #00557a 60%,
+        #004460 80%,
+        #001428 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(0,196,245,0.30);
+    color: #cceeff;
+    letter-spacing: 0.10em;
+    font-weight: 600;
+    animation:
+        biolum-pulse 4s ease-in-out infinite,
+        membrane-ripple 7s ease-in-out infinite;
+    /* Membrane — double couche translucide */
+    box-shadow:
+        0 0 12px rgba(0,196,245,0.35),
+        0 0 40px rgba(0,196,245,0.12),
+        inset 0 1px 0 rgba(0,240,200,0.22),
+        inset 0 -1px 0 rgba(0,0,60,0.40);
+}
+/* Couche membrane interne (brillance organique) */
+[data-theme="abyssal"] .btn-main::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 10px;
+    background: linear-gradient(180deg,
+        rgba(0,240,200,0.12) 0%,
+        rgba(0,196,245,0.04) 40%,
+        rgba(0,0,0,0) 100%);
+    pointer-events: none;
+}
+/* Bulle bioluminescente qui monte */
+[data-theme="abyssal"] .btn-main::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; left: 30%;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: rgba(0,240,200,0.75);
+    --bx: -8px;
+    opacity: 0;
+    pointer-events: none;
+    animation: deep-bubble 2.8s ease-in-out 1.4s infinite;
+}
+/* 2e bulle décalée */
+[data-theme="abyssal"] .btn-main > span::before {
+    display: none; /* JS free */
+}
+[data-theme="abyssal"] .btn-main:hover {
+    border-color: rgba(0,240,200,0.65);
+    color: #e0fffa;
+    animation:
+        biolum-pulse 1.8s ease-in-out infinite,
+        membrane-ripple 3.5s ease-in-out infinite;
+    transform: translateY(-3px);
+}
+/* Onde de pression au hover */
+[data-theme="abyssal"] .btn-main:hover::before {
+    animation: pressure-wave 0.6s ease-out forwards;
+    background: rgba(0,196,245,0.18);
+    border-radius: 50%;
+}
+
+[data-theme="abyssal"] .btn-ghost {
+    border-radius: 12px;
+    border: 1px solid rgba(0,196,245,0.22);
+    color: #80e4ff;
+    background: rgba(0,20,50,0.35);
+    backdrop-filter: blur(10px) saturate(1.4);
+    letter-spacing: 0.10em;
+    /* Contour qui respire comme une méduse */
+    animation: tentacle-sway 5s ease-in-out infinite;
+    box-shadow:
+        inset 0 0 20px rgba(0,196,245,0.05),
+        0 0 0 0 rgba(0,196,245,0);
+}
+[data-theme="abyssal"] .btn-ghost::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,196,245,0.10);
+    pointer-events: none;
+    animation: tentacle-sway 5s ease-in-out infinite reverse;
+}
+[data-theme="abyssal"] .btn-ghost:hover {
+    border-color: rgba(0,240,200,0.60);
+    color: #c0faff;
+    background: rgba(0,40,80,0.50);
+    box-shadow:
+        inset 0 0 28px rgba(0,240,200,0.10),
+        0 0 28px rgba(0,196,245,0.28),
+        0 0 60px rgba(0,196,245,0.10);
+    animation: none;
+    transform: translateY(-2px);
+}
