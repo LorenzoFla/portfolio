@@ -7,12 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" id="theme-css" href="">
     <link rel="icon" type="image/gif" href="img/bongo.gif">
 </head>
 <body>
 
-    <canvas id="theme-canvas"></canvas>
+    <canvas id="starfield"></canvas>
 
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -26,8 +25,6 @@
             <li><a href="#projects">Projets</a></li>
             <li><a href="#formation">Parcours</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#softskills">Soft Skills</a></li>
-            <li><a href="#reflexion">Réflexivité</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nm-wrap">
@@ -42,7 +39,7 @@
         <div class="hero-inner">
             <div class="dispo-badge reveal">
                 <span class="dispo-dot"></span>
-                <span class="dispo-text">Disponible pour tout type de projet &mdash; Après Août 2026</span>
+                <span class="dispo-text">Disponible pour alternance &mdash; Sept. 2025</span>
             </div>
             <div class="hero-badge">
                 <span class="hero-badge-dot"></span>
@@ -53,7 +50,7 @@
                 <span class="ht-last" data-text="Flagothier">Flagothier</span>
             </h1>
             <p class="hero-tagline">
-                Développeur <strong>fullstack &amp; IA</strong>, je construis des solutions qui ont du sens — du front-end à la donnée. Passionné par la conception logicielle, l'intelligence artificielle et les interfaces bien pensées.
+                Développeur en formation, passionné par la <strong>conception logicielle</strong> et les interfaces bien pensées. Je construis des solutions qui ont du sens.
             </p>
             <div id="dynamic-text"></div>
             <div class="hero-cta">
@@ -77,13 +74,10 @@
                         Je suis en <strong>3ème année de BUT Informatique</strong> à l'IUT de Lille. Ce qui me plaît dans l'informatique, c'est autant la résolution de problèmes complexes que la satisfaction de voir quelque chose fonctionner exactement comme prévu.
                     </p>
                     <p>
-                        En fin de 2ème année, j'ai effectué un <strong>stage Erasmus de 12 semaines au Japon</strong>, au National Institute of Technology de Gifu, où j'ai développé une intelligence artificielle pour un jeu de cartes. Une expérience qui m'a ouvert à l'IA et renforcé mon goût pour les projets ambitieux menés en totale autonomie.
+                        En fin de 2ème année, j'ai effectué un <strong>stage Erasmus de 12 semaines au Japon</strong>, au National Institute of Technology de Gifu, où j'ai développé une intelligence artificielle pour un jeu de cartes. Une expérience qui m'a ouvert à l'IA et renforcé mon goût pour les projets ambitieux et autonomes.
                     </p>
                     <p>
-                        J'ai une bonne aisance en <strong>développement web front et back</strong>, en conception orientée objet, et en gestion de projets agiles. Je m'intéresse de plus en plus à l'architecture logicielle et au machine learning.
-                    </p>
-                    <p>
-                        <strong>Mon projet professionnel :</strong> intégrer, après l'obtention de mon BUT en 2026, une équipe technique sur des sujets mêlant <strong>développement fullstack et intelligence artificielle</strong>. Je vise des postes de développeur fullstack ou des environnements data/IA où la rigueur technique et la curiosité sont valorisées.
+                        J'ai aussi une bonne aisance en <strong>développement web front et back</strong>, en conception orientée objet, et en gestion de projets agiles. Je m'intéresse de plus en plus à l'architecture logicielle et au machine learning.
                     </p>
                     <div class="highlight">
                         <em>"Le meilleur code est celui qu'on n'a pas besoin d'expliquer."</em>
@@ -128,22 +122,21 @@
                     </div>
                     <h3>IA pour le jeu Penguin Party</h3>
                     <p>
-                        Dans le cadre d'un stage de 12 semaines au National Institute of Technology de Gifu (Japon), j'ai conçu et développé en <strong>totale autonomie</strong> une intelligence artificielle pour le jeu de cartes <em>Penguin Party</em>, dans le contexte d'une compétition interne entre étudiants. Le jeu repose sur de l'information partielle : chaque joueur ne connaît que sa propre main, et le serveur Java du Professeur Tajima n'expose aucune information sur l'adversaire — ce qui rend la stratégie particulièrement complexe à modéliser.
+                        Dans le cadre d'un stage de 12 semaines au National Institute of Technology de Gifu (Japon), j'ai conçu et développé une intelligence artificielle pour le jeu de cartes <em>Penguin Party</em>, dans le contexte d'une compétition interne entre étudiants. Le jeu repose sur de l'information partielle : chaque joueur ne connaît que sa propre main, ce qui rend la stratégie complexe.
                     </p>
                     <p>
-                        J'ai modélisé la pyramide de jeu comme une matrice 2D et représenté la main du joueur comme une liste de cartes restantes. J'ai entraîné un <strong>RandomForestRegressor</strong> (scikit-learn) sur des parties simulées, avec récompense uniquement en fin de partie. La métrique de référence : la <strong>moyenne de cartes restantes après 100 victoires</strong>. J'ai également exploré le <strong>Q-learning</strong>, mais l'espace d'états trop large et l'information partielle rendaient la convergence instable — j'ai pris la décision de l'abandonner et de revenir à l'approche supervisée, plus robuste.
+                        J'ai d'abord implémenté une approche de <strong>machine learning supervisé</strong> (Random Forest Regressor), entraînée sur des parties simulées avec récompense en fin de jeu. J'ai ensuite exploré le <strong>Q-learning</strong>, que j'ai finalement abandonné au profit de ma première approche, plus stable. Mon IA bat systématiquement les stratégies aléatoires et a été testée contre d'autres IA d'étudiants japonais.
                     </p>
                     <div class="tags">
                         <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
                         <span class="tag">scikit-learn</span>
                         <span class="tag">NumPy</span>
                         <span class="tag">Pandas</span>
-                        <span class="tag">joblib</span>
-                        <span class="tag">Matplotlib</span>
                         <span class="tag">Q-learning</span>
                         <span class="tag">Java (serveur)</span>
                     </div>
-                    <a href="rapport/Rapport_stage_IUT_de_Lille_département_informatique_Lorenzo_Flagothier.pdf" class="proj-link" target="_blank">Lire le rapport →</a>
+                    <a href="img/Rapport_stage_IUT_de_Lille___département_informatique.pdf" class="proj-link" target="_blank">Lire le rapport →</a>
                 </div>
 
                 <div class="proj reveal">
@@ -151,7 +144,7 @@
                     <h3>Héros du savoir</h3>
                     <p>Jeu de plateau éducatif en Java simplifié. Chaque joueur incarne une matière scolaire et doit répondre à des quiz pour avancer et atteindre le cristal avant l'adversaire. Plusieurs niveaux de difficulté.</p>
                     <div class="tags"><span class="tag">Java</span><span class="tag">Game Design</span><span class="tag">Algorithmique</span></div>
-                    <a href="https://gitlab.univ-lille.fr/lorenzo.flagothier.etu/s1.02" class="proj-link" download="Rapport_Stage_Lorenzo_Flagothier.pdf">Voir le projet →</a>
+                    <a href="https://gitlab.univ-lille.fr/lorenzo.flagothier.etu/s1.02" class="proj-link">Voir le projet →</a>
                 </div>
 
                 <div class="proj reveal reveal-d1">
@@ -159,7 +152,7 @@
                     <h3>Ubivoit</h3>
                     <p>Site de covoiturage statique conçu en groupe de trois. L'accent était mis sur le design, la sémantique HTML et l'accessibilité — une vraie réflexion UX dès le départ.</p>
                     <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX Design</span><span class="tag">Accessibilité</span></div>
-                    <a href="https://gitlab.univ-lille.fr/lorenzo.flagothier.etu/site-sae-1.05-1.06" class="proj-link" >Voir le projet →</a>
+                    <a href="https://gitlab.univ-lille.fr/lorenzo.flagothier.etu/site-sae-1.05-1.06" class="proj-link">Voir le projet →</a>
                 </div>
 
                 <div class="proj reveal reveal-d2">
@@ -224,17 +217,17 @@
                     <img src="img/kiyosato_rock.png" alt="Restaurant Rock, Japon" class="tl-img">
                     <div class="tl-body">
                         <h3>Serveur — Restaurant Rock, Kiyosato 🇯🇵</h3>
-                        <p>Deux mois en immersion totale dans un restaurant de montagne à Moegi no mura, village isolé dans les Alpes japonaises. Service en salle, prise de commandes et relation client <strong>entièrement en japonais</strong> — avec seulement quelques bases à l'arrivée. Rythme physique intense, codes culturels du service japonais stricts, isolement géographique réel : quatre défis simultanés qui ont exigé une adaptation rapide et sans filet. Une expérience fondatrice sur le plan de la résilience et de la communication sous contrainte.</p>
+                        <p>Deux mois en immersion totale dans un restaurant de montagne à Moegi no mura. Service en salle, prise de commandes et relation client entièrement en japonais. Une expérience qui développe l'adaptabilité et la communication interculturelle.</p>
                         <span class="tl-date">Juillet — Août 2024</span>
                     </div>
                 </div>
 
-                <div class="tl-item">
+                <div class="tl-item highlight-item">
                     <div class="tl-dot"></div>
-                    <img src="img/gifu.png" alt="IUT de Lille" class="tl-img">
+                    <img src="img/iut.png" alt="NIT Gifu" class="tl-img">
                     <div class="tl-body">
                         <h3>Stage Erasmus — National Institute of Technology, Gifu 🇯🇵</h3>
-                        <p>Stage de 12 semaines dans le laboratoire du Professeur Koji Tajima au sein du département informatique du Kosen de Gifu. Mission principale : développement d'une IA compétitive pour le jeu de cartes Penguin Party en Python (machine learning supervisé). Travail en autonomie totale, dans un environnement multiculturel avec des étudiants japonais et thaïlandais. Participation à des échanges interculturels, sports et activités organisés par l'école.</p>
+                        <p>Stage de 12 semaines dans le laboratoire du Professeur Koji Tajima au sein du département informatique du Kosen de Gifu. Mission principale : développement d'une IA compétitive pour le jeu de cartes Penguin Party en Python (machine learning supervisé). Travail en autonomie totale, dans un environnement multiculturel avec des étudiants japonais et thaïlandais. Participation à des échanges interculturels, sports et activités organisés par l'école. Plusieurs propositions d'emploi reçues au Japon en fin de stage.</p>
                         <span class="tl-date">Avril — Juin 2025</span>
                     </div>
                 </div>
@@ -245,68 +238,11 @@
 
     <div class="divider"></div>
 
-    <!-- ── EXPERIENCE PROFESSIONNELLE (DÉTAIL STAGE) ── -->
-    <section id="experience">
-        <div class="container">
-            <div class="s-eyebrow reveal">04 &mdash; Expérience professionnelle</div>
-            <h2 class="s-title reveal">Mon stage en <em>détail</em></h2>
-
-            <div class="about-layout reveal">
-                <div class="about-text">
-                    <h3 style="margin-bottom: 0.5rem;">Contexte</h3>
-                    <p>
-                        Le <strong>National Institute of Technology de Gifu</strong> (Kosen) est un établissement d'enseignement supérieur technologique japonais, situé à Motosu, dans la préfecture de Gifu. J'y ai intégré le laboratoire du Professeur Koji Tajima, passionné d'IA et de jeux de société. La salle de travail réunissait une dizaine de personnes : six étudiants japonais (dont Hayata Shota et Yutaka), deux stagiaires thaïlandais (dont Vuth), et moi. Chacun disposait de son propre poste, avec un accès libre aux outils et aux bibliothèques.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Missions confiées</h3>
-                    <p>
-                        Ma mission principale : <strong>concevoir et développer une IA compétitive</strong> pour le jeu de cartes <em>Penguin Party</em>, dans le cadre d'une compétition interne entre étudiants. Aucun cahier des charges détaillé, aucune méthodologie imposée — seulement une contrainte : le projet devait être terminé avant la fin du stage. J'ai défini moi-même mes objectifs, choisi mes outils (Python, scikit-learn, NumPy, Pandas, joblib, Matplotlib), structuré mes itérations et piloté l'ensemble du développement.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Autonomie</h3>
-                    <p>
-                        Le stage s'est déroulé en <strong>totale autonomie</strong>. L'absence de jalons imposés a été à la fois un défi et une opportunité : j'ai appris à apprendre par moi-même, à tester des hypothèses, à analyser les résultats et à trancher. Quand mon IA ne jouait pas lorsqu'elle était le premier joueur — un bug critique — j'ai identifié et résolu le problème seul, par inspection de code et expérimentation. C'est aussi moi qui ai décidé d'abandonner le Q-learning après avoir constaté son instabilité sur cet espace d'états, et d'assumer ce pivot techniquement et vis-à-vis du Professeur Tajima.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Interactions</h3>
-                    <p>
-                        Avec le <strong>Professeur Tajima</strong> : des points réguliers pour présenter l'avancement, discuter des choix techniques et recevoir des retours positifs et constructifs. Ces échanges m'ont appris à défendre mes décisions de conception avec des arguments. Avec les <strong>autres étudiants</strong> : des duels informels entre nos IA respectifs, des échanges sur les stratégies, et des moments de vie partagés lors des événements de l'école (Talk Café hebdomadaire, Sports Day, barbecue). L'anglais était la seule langue commune à tous — ce qui a exigé une communication précise, claire et sans implicites culturels.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat reveal reveal-d1">
-                        <div class="stat-val">12</div>
-                        <div class="stat-lbl">Semaines de stage</div>
-                    </div>
-                    <div class="stat reveal reveal-d2">
-                        <div class="stat-val">100%</div>
-                        <div class="stat-lbl">Autonomie</div>
-                    </div>
-                    <div class="stat reveal reveal-d1">
-                        <div class="stat-val">3+</div>
-                        <div class="stat-lbl">Nationalités dans l'équipe</div>
-                    </div>
-                    <div class="stat reveal reveal-d2">
-                        <div class="stat-val">🏆</div>
-                        <div class="stat-lbl">IA compétitive</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
     <!-- ── SKILLS ── -->
     <section id="skills">
         <div class="container">
-            <div class="s-eyebrow reveal">05 &mdash; Stack technique</div>
-            <h2 class="s-title reveal">Compétences <em>techniques</em></h2>
-
-            <div class="about-text reveal" style="margin-bottom: 2.5rem;">
-                <p>Ces compétences ont toutes été mobilisées dans un contexte réel — projets universitaires, stage Erasmus ou développements personnels. Voici comment je les utilise concrètement.</p>
-            </div>
-
+            <div class="s-eyebrow reveal">04 &mdash; Stack technique</div>
+            <h2 class="s-title reveal">Mes <em>compétences</em></h2>
             <div class="skills-grid reveal">
                 <div class="skill"><img src="img/html.png" alt="HTML"><span class="skill-lbl">HTML</span></div>
                 <div class="skill"><img src="img/css.png" alt="CSS"><span class="skill-lbl">CSS</span></div>
@@ -318,211 +254,17 @@
                 <div class="skill"><img src="img/bash.png" alt="Bash"><span class="skill-lbl">Bash</span></div>
                 <div class="skill"><img src="img/C.png" alt="C"><span class="skill-lbl">C</span></div>
             </div>
-
-            <!-- Compétences contextualisées -->
-            <div class="proj-grid reveal" style="margin-top: 3rem;">
-
-                <div class="proj reveal">
-                    <div class="proj-num">Front-end</div>
-                    <h3>HTML / CSS / JavaScript</h3>
-                    <p>Utilisés sur ce portfolio et sur le projet Ubivoit. Je maîtrise la sémantique HTML, le CSS avancé (animations, variables, responsive) et le DOM manipulation en JS. Niveau : <strong>opérationnel</strong>.</p>
-                    <div class="tags"><span class="tag">Responsive Design</span><span class="tag">Accessibilité</span><span class="tag">UX</span></div>
-                </div>
-
-                <div class="proj reveal reveal-d1">
-                    <div class="proj-num">Back-end / Java</div>
-                    <h3>Java &amp; JEE</h3>
-                    <p>Utilisé sur la majorité des projets universitaires (Héros du savoir, Nerd Factory, Classification, Spyke). Architecture MVC, gestion des servlets, conception orientée objet. Niveau : <strong>avancé</strong>.</p>
-                    <div class="tags"><span class="tag">POO</span><span class="tag">MVC</span><span class="tag">JEE</span><span class="tag">Servlets</span></div>
-                </div>
-
-                <div class="proj reveal reveal-d2">
-                    <div class="proj-num">IA / Data</div>
-                    <h3>Python &amp; Machine Learning</h3>
-                    <p>Utilisé intensivement pendant le stage Erasmus pour développer l'IA Penguin Party. scikit-learn, NumPy, Pandas, exploration du Q-learning. Niveau : <strong>intermédiaire-avancé</strong>, en progression constante.</p>
-                    <div class="tags"><span class="tag">scikit-learn</span><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">ML supervisé</span></div>
-                </div>
-
-                <div class="proj reveal">
-                    <div class="proj-num">Données &amp; Versioning</div>
-                    <h3>PostgreSQL &amp; Git</h3>
-                    <p>PostgreSQL utilisé sur Spyke et Nerd Factory (modélisation, requêtes, sécurité anti-injection). Git avec workflow rigoureux sur Classification — branches, pull requests, revue de code. Niveau : <strong>opérationnel</strong>.</p>
-                    <div class="tags"><span class="tag">SQL</span><span class="tag">Sécurité</span><span class="tag">Git Flow</span></div>
-                </div>
-
-            </div>
         </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- ── SOFT SKILLS ── -->
-    <section id="softskills">
-        <div class="container">
-            <div class="s-eyebrow reveal">06 &mdash; Compétences comportementales</div>
-            <h2 class="s-title reveal">Comment je <em>travaille</em></h2>
 
-            <div class="about-text reveal" style="margin-bottom: 2.5rem;">
-                <p>Ces compétences ne s'énoncent pas — elles se prouvent. Voici comment elles se sont manifestées concrètement, principalement lors de mon stage au Japon.</p>
-            </div>
 
-            <div class="proj-grid reveal">
-
-                <div class="proj featured reveal">
-                    <div class="proj-badge">
-                        <span class="proj-badge-dot"></span>
-                        Manière d'être
-                    </div>
-                    <h3>Adaptabilité — deux fois, deux contextes opposés</h3>
-                    <p>
-                        Avant le stage Erasmus, j'avais déjà été confronté à une forme d'adaptation radicale : deux mois comme serveur dans un restaurant de montagne isolé à Kiyosato, avec seulement quelques bases de japonais. Pas d'anglais possible, rythme physique intense, codes culturels du service japonais très stricts, et isolement géographique réel — quatre obstacles simultanés, dans un domaine qui n'est pas le mien.
-                    </p>
-                    <p>
-                        Ce premier séjour m'a appris à fonctionner sous contrainte, à communiquer par d'autres moyens que les mots, et à ne pas me laisser paralyser par l'inconfort. Quand je suis arrivé à Gifu un an plus tard pour le stage Erasmus, <strong>j'avais déjà un référentiel</strong> : je savais que je pouvais m'adapter. Dès mon arrivée au Kosen, je n'ai pas ressenti de nervosité — seulement l'envie de recommencer à explorer.
-                    </p>
-                    <div class="tags"><span class="tag">Résilience</span><span class="tag">Ouverture</span><span class="tag">Gestion de l'inconfort</span><span class="tag">Communication non-verbale</span></div>
-                </div>
-
-                <div class="proj reveal">
-                    <div class="proj-badge">
-                        <span class="proj-badge-dot"></span>
-                        Manière de travailler
-                    </div>
-                    <h3>Autonomie &amp; résolution de problèmes</h3>
-                    <p>
-                        Pendant le stage, j'ai rencontré un bug critique : mon IA ne jouait pas lorsqu'elle était le premier joueur. Sans documentation claire sur le protocole du serveur Java et sans personne à qui demander directement, j'ai résolu le problème seul — par inspection du code, tests itératifs et analyse des échanges réseau. Ce type de débogage autonome, en terrain inconnu, a considérablement renforcé ma capacité à <strong>apprendre par l'expérimentation</strong>.
-                    </p>
-                    <p>
-                        Plus globalement, l'absence de jalons imposés m'a poussé à structurer mon propre workflow. J'ai appris que dans certaines situations, un système simple mais bien conçu surpasse des approches plus sophistiquées qui manquent de stabilité — une leçon concrète tirée de l'abandon du Q-learning.
-                    </p>
-                    <div class="tags"><span class="tag">Autonomie</span><span class="tag">Rigueur</span><span class="tag">Prise d'initiative</span></div>
-                </div>
-
-                <div class="proj reveal reveal-d1">
-                    <div class="proj-badge">
-                        <span class="proj-badge-dot"></span>
-                        Manière de communiquer
-                    </div>
-                    <h3>Communication interculturelle</h3>
-                    <p>
-                        Travailler avec Hayata, Yutaka, Vuth et les autres stagiaires — dans une langue (l'anglais) qui n'est la langue maternelle d'aucun de nous — m'a obligé à développer une communication volontairement claire, précise et sans implicites culturels. Les duels informels entre nos IA respectives étaient une occasion concrète de reformuler des choix techniques complexes de façon accessible.
-                    </p>
-                    <p>
-                        Les points réguliers avec le Professeur Tajima m'ont également formé à <strong>présenter et défendre des décisions de conception</strong> de manière structurée — notamment lorsque j'ai dû justifier l'abandon du Q-learning avec des données chiffrées (moyenne de cartes restantes après 100 victoires).
-                    </p>
-                    <div class="tags"><span class="tag">Écoute active</span><span class="tag">Reformulation</span><span class="tag">Assertivité</span></div>
-                </div>
-
-                <div class="proj reveal reveal-d2">
-                    <div class="proj-badge">
-                        <span class="proj-badge-dot"></span>
-                        Manière d'être avec les autres
-                    </div>
-                    <h3>Intégration dans des équipes différentes</h3>
-                    <p>
-                        Dans la salle de travail du Kosen, je n'avais pas de "groupe naturel". J'ai créé des liens là où rien n'était évident — avec des étudiants d'une autre culture, d'un autre système éducatif, d'une autre façon d'aborder le travail collectif. Le Professeur Tajima encourageait activement les échanges entre nous pour pratiquer l'anglais, ce qui a transformé le lieu de travail en espace de coopération informelle.
-                    </p>
-                    <p>
-                        Cette expérience m'a montré que je suis capable de trouver ma place dans des collectifs très divers, <strong>sans me fondre dedans ni m'isoler</strong>. Les retours positifs et constructifs reçus du Professeur Tajima tout au long du stage ont confirmé cette capacité d'intégration.
-                    </p>
-                    <div class="tags"><span class="tag">Coopération</span><span class="tag">Intelligence relationnelle</span><span class="tag">Posture pro</span></div>
-                </div>
-
-                <div class="proj reveal">
-                    <div class="proj-badge">
-                        <span class="proj-badge-dot"></span>
-                        Engagement &amp; sens des responsabilités
-                    </div>
-                    <h3>Transmettre à l'IUT</h3>
-                    <p>
-                        Depuis la 2ème année, je m'implique dans la vie de l'IUT au-delà des cours : présentation de la formation au Salon de l'Étudiant et aux Journées Portes Ouvertes, participation à la mise en place des journées de recrutement de stages. En 3ème année, j'ai commencé le tutorat auprès d'étudiants de première année.
-                    </p>
-                    <p>
-                        Ces engagements répondent à une envie simple : <strong>que les gens qui arrivent après moi aient un parcours plus fluide que le mien</strong>. Aider quelqu'un à décrocher son stage, à comprendre un concept qui bloquait, ou simplement à se projeter dans la formation — c'est le type de contribution qui me motive vraiment.
-                    </p>
-                    <div class="tags"><span class="tag">Sens du collectif</span><span class="tag">Transmission</span><span class="tag">Initiative</span></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── RÉFLEXIVITÉ ── -->
-    <section id="reflexion">
-        <div class="container">
-            <div class="s-eyebrow reveal">07 &mdash; Analyse réflexive</div>
-            <h2 class="s-title reveal">Ce que j'ai appris <em>sur moi</em></h2>
-
-            <div class="about-layout reveal">
-                <div class="about-text">
-
-                    <h3 style="margin-bottom: 0.5rem;">Ce que l'expérience m'a appris</h3>
-                    <p>
-                        Mon rapport à l'adaptation a été construit progressivement, en deux étapes. D'abord Kiyosato : deux mois à travailler dans un restaurant de montagne isolé, en japonais, sans filet, dans un domaine qui n'est pas le mien. Puis Gifu : douze semaines sur un projet d'IA en totale autonomie, dans un environnement multiculturel. Ce n'est pas le Japon en soi qui m'a appris quelque chose — c'est la <strong>répétition du défi</strong> : aller vers l'inconnu, recommencer à zéro, trouver mes repères sans attendre qu'on me les donne.
-                    </p>
-                    <p>
-                        J'ai aussi découvert que je suis capable de m'intégrer dans des équipes très différentes de moi — culturellement, linguistiquement, professionnellement — en trouvant naturellement les bons équilibres entre affirmation de soi et adaptation au contexte.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Mes points forts identifiés en situation réelle</h3>
-                    <p>
-                        La <strong>résolution de problèmes complexes en autonomie</strong> est clairement un point fort. Face au bug du premier joueur ou à l'instabilité du Q-learning, je n'ai pas attendu d'aide : j'ai analysé, testé, tranché. Cette capacité à apprendre par l'expérimentation — sans documentation complète, sans filet — est quelque chose que je n'avais pas vraiment mesurée avant ce stage.
-                    </p>
-                    <p>
-                        Mon engagement à l'IUT — tutorat, salons, portes ouvertes, recrutement — m'a également confirmé quelque chose : <strong>j'apprends mieux quand je transmets</strong>. Expliquer un concept à un étudiant de première année me force à le comprendre autrement. C'est une forme d'apprentissage que je chercherai à entretenir dans ma vie professionnelle.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Mes axes de progrès</h3>
-                    <p>
-                        Le principal axe que j'identifie est la <strong>structuration de mon travail et la gestion du temps</strong>. En autonomie totale, sans jalons imposés, j'ai parfois eu tendance à me laisser absorber par un problème technique au détriment d'une vision d'ensemble. Définir des échéances intermédiaires dès le départ du projet aurait amélioré ma productivité et réduit certaines phases de tâtonnement.
-                    </p>
-                    <p>
-                        Ce constat m'a poussé à m'intéresser davantage aux méthodologies de travail structurées — gestion de backlog, time-boxing — que je cherche à intégrer systématiquement dans mes projets.
-                    </p>
-
-                    <h3 style="margin-bottom: 0.5rem; margin-top: 1.5rem;">Une réflexion honnête sur mon projet professionnel</h3>
-                    <p>
-                        Ce stage m'a prouvé que je suis capable de mener un projet technique complexe de manière autonome dans un contexte international. Mais il m'a aussi montré que <strong>mes aspirations professionnelles méritent encore d'être clarifiées</strong>. Je ne suis pas encore certain que l'informatique soit ma seule voie à long terme — et je préfère l'assumer lucidement plutôt que de le masquer. Ce doute, façonné par une expérience réelle, est déjà un pas en avant par rapport à l'incertitude abstraite que j'avais avant le stage.
-                    </p>
-                    <p>
-                        Ce que je sais avec certitude : j'ai besoin d'<strong>environnements qui challengent</strong>, de problèmes ouverts, et de contextes où aider et transmettre font partie du quotidien. C'est dans ces conditions que je donne le meilleur de moi-même.
-                    </p>
-
-                    <div class="highlight">
-                        <em>"Ce stage ne m'a pas seulement appris à faire du machine learning. Il m'a appris comment je travaille — et c'est plus précieux encore."</em>
-                    </div>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat reveal reveal-d1">
-                        <div class="stat-val">💪</div>
-                        <div class="stat-lbl">Fonctionner dans l'inconnu</div>
-                    </div>
-                    <div class="stat reveal reveal-d2">
-                        <div class="stat-val">🌍</div>
-                        <div class="stat-lbl">Intégration interculturelle</div>
-                    </div>
-                    <div class="stat reveal reveal-d1">
-                        <div class="stat-val">📈</div>
-                        <div class="stat-lbl">Axe : structuration du travail</div>
-                    </div>
-                    <div class="stat reveal reveal-d2">
-                        <div class="stat-val">🎯</div>
-                        <div class="stat-lbl">Environnements exigeants</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── CONTACT ── -->
+        <!-- ── CONTACT ── -->
     <section id="contact">
         <div class="container">
-            <div class="s-eyebrow reveal">08 &mdash; Contact</div>
+            <div class="s-eyebrow reveal">05 &mdash; Contact</div>
             <h2 class="s-title reveal">Travaillons <em>ensemble</em></h2>
             <p class="contact-sub reveal">
                 Je suis ouvert aux <strong>stages, alternances et collaborations</strong>.<br>
@@ -553,11 +295,19 @@
     <!-- ── FOOTER ── -->
     <footer>
         <div class="f-logo">Lorenzo <em>Flagothier</em></div>
+        <div class="f-visitors">
+            <span class="f-visitors-label">Visiteurs</span>
+            <div class="odometer" id="visit-counter">
+                <span class="od-digit">0</span>
+                <span class="od-digit">0</span>
+                <span class="od-digit">0</span>
+                <span class="od-digit">0</span>
+                <span class="od-digit">0</span>
+            </div>
+        </div>
         <div class="f-copy">© 2025 Lorenzo Flagothier</div>
     </footer>
 
-    <script src="quiz.js"></script>
-    <script src="script-common.js"></script>
-    <script id="theme-script"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -511,46 +511,39 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     drawOverlay();
 })();
 
-// ── CYBER-TOKYO : Pluie de katakana ──
+// ── COMPTEUR VISITEURS ──
 (function () {
-    function initKatakanaRain() {
-        if (document.body.dataset.theme !== 'tokyo') return;
-        const existing = document.getElementById('katakana-rain');
-        if (existing) return;
+    const counter = document.getElementById('visit-counter');
+    if (!counter) return;
+    const digits = counter.querySelectorAll('.od-digit');
 
-        const rain = document.createElement('div');
-        rain.id = 'katakana-rain';
-        document.body.appendChild(rain);
+    // Use localStorage as simple persistent counter (per browser)
+    // For a "real" shared counter we'd need a backend — this uses storage API
+    let count = 0;
+    try {
+        count = parseInt(localStorage.getItem('lf_visits') || '0', 10);
+        count++;
+        localStorage.setItem('lf_visits', count);
+    } catch(e) { count = 1; }
 
-        const kana = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-        const cols = Math.floor(window.innerWidth / 28);
-        for (let i = 0; i < cols; i++) {
-            const col = document.createElement('div');
-            col.className = 'kana-col';
-            col.style.left = (i * 28 + Math.random() * 14) + 'px';
-            col.style.animationDuration = (8 + Math.random() * 16) + 's';
-            col.style.animationDelay = (-Math.random() * 20) + 's';
-            const len = 6 + Math.floor(Math.random() * 14);
-            col.textContent = Array.from({length:len}, () => kana[Math.floor(Math.random()*kana.length)]).join('\n');
-            rain.appendChild(col);
-        }
+    // Animate odometer to count value
+    function setDigits(n) {
+        const str = String(n).padStart(digits.length, '0');
+        digits.forEach((d, i) => {
+            const target = parseInt(str[i], 10);
+            let current = 0;
+            const step = () => {
+                d.textContent = current;
+                if (current < target) { current++; setTimeout(step, 80 + i * 20); }
+            };
+            setTimeout(step, i * 120);
+        });
     }
 
-    // Run on load + observe theme changes
-    window.addEventListener('load', initKatakanaRain);
-    const obs = new MutationObserver(() => initKatakanaRain());
-    obs.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
-})();
-
-// ── BOUTON RESET THÈME ──
-(function () {
-    const btn = document.createElement('button');
-    btn.id = 'theme-reset-btn';
-    btn.title = 'Changer de thème';
-    btn.textContent = '◈';
-    btn.addEventListener('click', () => {
-        sessionStorage.removeItem('lf_theme');
-        location.reload();
-    });
-    document.body.appendChild(btn);
+    // Trigger when footer is visible
+    const footer = document.querySelector('footer');
+    const io = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { setDigits(count); io.disconnect(); }
+    }, { threshold: 0.5 });
+    io.observe(footer);
 })();
