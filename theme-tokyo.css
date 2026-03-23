@@ -1,0 +1,360 @@
+/* ══════════════════════════════════════
+   THÈME — CYBER-TOKYO
+   Noir pur, néons rose/cyan, kanji, pluie katakana
+══════════════════════════════════════ */
+
+[data-theme="tokyo"] {
+    --bg:        #04040a;
+    --bg2:       #070710;
+    --bg3:       #0a0a16;
+    --violet:    #c026d3;
+    --violet-m:  #d946ef;
+    --violet-l:  #22d3ee;
+    --violet-xl: #a5f3fc;
+    --gold:      #f0abfc;
+    --gold-l:    #f5d0fe;
+    --rose:      #f472b6;
+    --text:      #f0f9ff;
+    --text-soft: #7dd3fc;
+    --text-dim:  #1e4060;
+    --border:    rgba(34,211,238,0.18);
+    --border-h:  rgba(34,211,238,0.5);
+    --glow:      rgba(192,38,211,0.5);
+}
+
+[data-theme="tokyo"] body {
+    background: var(--bg);
+}
+
+/* Orbes néon */
+[data-theme="tokyo"] .orb-1 {
+    background: radial-gradient(circle, rgba(192,38,211,0.55) 0%, transparent 65%);
+}
+[data-theme="tokyo"] .orb-2 {
+    background: radial-gradient(circle, rgba(34,211,238,0.45) 0%, transparent 65%);
+}
+[data-theme="tokyo"] .orb-3 {
+    background: radial-gradient(circle, rgba(244,114,182,0.2) 0%, transparent 65%);
+}
+
+/* Starfield cyan */
+[data-theme="tokyo"] #starfield { filter: hue-rotate(200deg) saturate(1.4) brightness(0.9); }
+[data-theme="tokyo"] canvas:not(#starfield) { filter: hue-rotate(180deg) saturate(1.2); }
+
+/* Nav — néon border */
+[data-theme="tokyo"] nav {
+    background: rgba(4,4,10,0.9);
+    border-bottom: 1px solid rgba(34,211,238,0.25);
+    box-shadow: 0 0 30px rgba(34,211,238,0.08);
+}
+[data-theme="tokyo"] nav ul li a::after {
+    background: linear-gradient(90deg, var(--violet-l), var(--rose));
+}
+
+/* Titre — neon glow */
+[data-theme="tokyo"] .ht-last {
+    background: linear-gradient(115deg, #22d3ee 0%, #f0abfc 55%, #f472b6 100%);
+    -webkit-background-clip: text; background-clip: text;
+}
+[data-theme="tokyo"] h1.hero-title .ht-name {
+    text-shadow: 0 0 30px rgba(34,211,238,0.3);
+}
+[data-theme="tokyo"] h2.s-title em {
+    background: linear-gradient(90deg, #22d3ee, #f0abfc);
+    -webkit-background-clip: text; background-clip: text;
+}
+
+/* Hero badge */
+[data-theme="tokyo"] .hero-badge {
+    border-color: rgba(34,211,238,0.35);
+    color: var(--violet-l);
+    background: rgba(34,211,238,0.06);
+}
+[data-theme="tokyo"] .hero-badge-dot { background: var(--violet-l); box-shadow: 0 0 10px rgba(34,211,238,0.8); }
+
+/* Buttons */
+[data-theme="tokyo"] .btn-main {
+    background: linear-gradient(135deg, var(--violet) 0%, #7c3aed 100%);
+    box-shadow: 0 0 30px rgba(192,38,211,0.5);
+}
+[data-theme="tokyo"] .btn-main:hover { box-shadow: 0 0 50px rgba(192,38,211,0.7); }
+[data-theme="tokyo"] .btn-ghost {
+    border-color: rgba(34,211,238,0.3);
+    color: var(--violet-l);
+}
+[data-theme="tokyo"] .btn-ghost:hover {
+    border-color: var(--violet-l);
+    color: var(--text);
+    background: rgba(34,211,238,0.07);
+    box-shadow: 0 0 20px rgba(34,211,238,0.2);
+}
+
+/* Cards projets */
+[data-theme="tokyo"] .proj {
+    background: linear-gradient(155deg, rgba(192,38,211,0.06) 0%, rgba(4,4,10,0.8) 100%);
+    border-color: rgba(34,211,238,0.15);
+}
+[data-theme="tokyo"] .proj:hover {
+    border-color: rgba(34,211,238,0.45);
+    box-shadow: 0 0 60px rgba(34,211,238,0.12), 0 0 120px rgba(192,38,211,0.08);
+}
+[data-theme="tokyo"] .proj::before {
+    background: linear-gradient(90deg, transparent, #22d3ee, #f0abfc, transparent);
+}
+[data-theme="tokyo"] .proj.featured {
+    border-color: rgba(240,171,252,0.4);
+}
+
+/* Tags */
+[data-theme="tokyo"] .tag {
+    border-color: rgba(34,211,238,0.3);
+    color: var(--violet-xl);
+    background: rgba(34,211,238,0.07);
+}
+
+/* Skills */
+[data-theme="tokyo"] .skill {
+    background: linear-gradient(145deg, rgba(192,38,211,0.07), rgba(4,4,10,0.6));
+}
+[data-theme="tokyo"] .skill:hover {
+    border-color: rgba(34,211,238,0.55);
+    box-shadow: 0 0 30px rgba(34,211,238,0.2);
+}
+
+/* Timeline */
+[data-theme="tokyo"] .tl-dot {
+    border-color: var(--violet-l);
+    box-shadow: 0 0 18px rgba(34,211,238,0.6);
+}
+[data-theme="tokyo"] .timeline {
+    border-left-color: rgba(34,211,238,0.2);
+}
+
+/* Stat cards */
+[data-theme="tokyo"] .stat-val {
+    background: linear-gradient(135deg, #22d3ee, #f0abfc);
+    -webkit-background-clip: text; background-clip: text;
+}
+
+/* Contact */
+[data-theme="tokyo"] .cc { background: rgba(34,211,238,0.05); }
+[data-theme="tokyo"] .cc:hover {
+    border-color: rgba(34,211,238,0.5);
+    background: rgba(34,211,238,0.1);
+    box-shadow: 0 0 20px rgba(34,211,238,0.15);
+}
+
+/* Pluie de katakana en fond */
+[data-theme="tokyo"] #katakana-rain {
+    position: fixed; inset: 0;
+    pointer-events: none; z-index: 0;
+    overflow: hidden;
+    opacity: 0.07;
+}
+[data-theme="tokyo"] .kana-col {
+    position: absolute;
+    top: -100%;
+    font-family: monospace;
+    font-size: 14px;
+    color: #22d3ee;
+    line-height: 1.4;
+    animation: kana-fall linear infinite;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    letter-spacing: 4px;
+}
+@keyframes kana-fall {
+    from { transform: translateY(-100%); }
+    to   { transform: translateY(200vh); }
+}
+
+/* Scanlines CRT légères */
+[data-theme="tokyo"] body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(34,211,238,0.025) 3px,
+        rgba(34,211,238,0.025) 4px
+    );
+    pointer-events: none; z-index: 0;
+}
+
+/* Glow sur les titres de section */
+[data-theme="tokyo"] .s-eyebrow {
+    color: var(--violet-l);
+    text-shadow: 0 0 12px rgba(34,211,238,0.5);
+}
+
+/* ══════════════════════════════════════
+   LIGHT MODE — CYBER-TOKYO
+   Blanc laqué, néons sur fond clair, futuriste de jour
+══════════════════════════════════════ */
+[data-theme="tokyo"] body.light-mode {
+    --bg:        #f0f8ff;
+    --bg2:       #e0f2fe;
+    --bg3:       #cce8fc;
+    --text:      #040410;
+    --text-soft: #1a5580;
+    --text-dim:  #4a90b0;
+    --border:    rgba(34,211,238,0.28);
+    --glow:      rgba(34,211,238,0.15);
+    --section-bg: var(--bg2);
+    background:  #e8f6ff !important;
+}
+[data-theme="tokyo"] body.light-mode nav {
+    background: rgba(240,248,255,0.88);
+}
+[data-theme="tokyo"] body.light-mode section {
+    background: rgba(210,240,255,0.58);
+}
+[data-theme="tokyo"] body.light-mode footer {
+    background: rgba(210,240,255,0.58);
+}
+[data-theme="tokyo"] body.light-mode .orb { opacity: .12; }
+[data-theme="tokyo"] body.light-mode .tag {
+    border-color: rgba(192,38,211,0.40);
+    color: #c026d3;
+    background: rgba(192,38,211,0.08);
+}
+[data-theme="tokyo"] body.light-mode .tl-date,
+[data-theme="tokyo"] body.light-mode .hero-badge,
+[data-theme="tokyo"] body.light-mode .proj-badge {
+    border-color: rgba(34,211,238,0.40);
+    color: #0e7490;
+    background: rgba(34,211,238,0.08);
+}
+[data-theme="tokyo"] body.light-mode h2.s-title,
+[data-theme="tokyo"] body.light-mode .tl-body h3,
+[data-theme="tokyo"] body.light-mode .proj h3 { color: var(--text); }
+[data-theme="tokyo"] body.light-mode .skill-lbl,
+[data-theme="tokyo"] body.light-mode .nm-label { color: var(--text-soft); }
+[data-theme="tokyo"] body.light-mode .proj-link { color: #c026d3; }
+[data-theme="tokyo"] body.light-mode .proj { background: rgba(34,211,238,0.05); }
+[data-theme="tokyo"] body.light-mode .stat {
+    background: linear-gradient(140deg, rgba(192,38,211,0.07), rgba(34,211,238,0.04));
+}
+
+/* ══════════════════════════════════════
+
+/* ══════════════════════════════════════
+   BOUTONS — CYBER-TOKYO
+   Hologramme · Portail plasma · Kanji fantôme
+══════════════════════════════════════ */
+@keyframes holo-shift {
+    0%   { background-position: 0% 50%;   filter: hue-rotate(0deg); }
+    50%  { background-position: 100% 50%; filter: hue-rotate(25deg); }
+    100% { background-position: 0% 50%;   filter: hue-rotate(0deg); }
+}
+@keyframes scanline-fast {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+/* Anneau de portail qui s'ouvre depuis le centre */
+@keyframes portal-ring {
+    0%   { transform: translate(-50%,-50%) scale(0); opacity: 0.8; }
+    100% { transform: translate(-50%,-50%) scale(3.5); opacity: 0; }
+}
+@keyframes portal-ring-2 {
+    0%   { transform: translate(-50%,-50%) scale(0); opacity: 0.55; }
+    100% { transform: translate(-50%,-50%) scale(3.5); opacity: 0; }
+}
+@keyframes kanji-scroll {
+    0%   { transform: translateY(-50%) translateX(0)   scaleX(1);   opacity:0.06; }
+    50%  { transform: translateY(-50%) translateX(-6px) scaleX(1.02); opacity:0.10; }
+    100% { transform: translateY(-50%) translateX(0)   scaleX(1);   opacity:0.06; }
+}
+@keyframes border-chase {
+    0%   { clip-path: inset(0 100% 98% 0); }
+    25%  { clip-path: inset(0 0 98% 0); }
+    50%  { clip-path: inset(0 0 98% 100%); }
+    75%  { clip-path: inset(98% 0 0 0); }
+    100% { clip-path: inset(0 100% 98% 0); }
+}
+
+[data-theme="tokyo"] .btn {
+    position: relative;
+    overflow: visible;
+    font-family: var(--font-sans);
+}
+
+[data-theme="tokyo"] .btn-main {
+    background: linear-gradient(270deg,
+        #0d001a, #3b0070, #c026d3, #22d3ee, #3b0070, #0d001a);
+    background-size: 300% 300%;
+    border-radius: 3px;
+    border: 1px solid rgba(192,38,211,0.50);
+    outline: 1px solid rgba(34,211,238,0.30);
+    outline-offset: 3px;
+    color: #fff;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.71rem;
+    animation: holo-shift 4s ease infinite;
+    box-shadow:
+        0 0 18px rgba(192,38,211,0.40),
+        0 0 50px rgba(192,38,211,0.12),
+        inset 0 0 18px rgba(34,211,238,0.06);
+    text-shadow: 0 0 10px rgba(255,255,255,0.75);
+    transition: outline-color 0.3s, outline-offset 0.3s, box-shadow 0.3s;
+}
+/* Scanline fine */
+[data-theme="tokyo"] .btn-main::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+    pointer-events: none;
+    animation: scanline-fast 2s linear infinite;
+}
+/* Kanji fantôme respire doucement */
+[data-theme="tokyo"] .btn-main::after {
+    content: '電';
+    position: absolute;
+    right: -2px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.4rem;
+    color: rgba(34,211,238,0.06);
+    font-family: serif;
+    pointer-events: none;
+    letter-spacing: 0;
+    line-height: 1;
+    animation: kanji-scroll 6s ease-in-out infinite;
+}
+
+/* Hover : verre holographique + portail plasma */
+[data-theme="tokyo"] .btn-main:hover {
+    outline-color: rgba(34,211,238,0.85);
+    outline-offset: 6px;
+    background: linear-gradient(270deg,
+        #1a0030, #5500a0, #d946ef, #00e5ff, #5500a0, #1a0030);
+    background-size: 300% 300%;
+    animation: holo-shift 1.5s ease infinite;
+    box-shadow:
+        0 0 0   2px rgba(34,211,238,0.20),
+        0 0 28px rgba(192,38,211,0.75),
+        0 0 70px rgba(34,211,238,0.30),
+        inset 0 0 28px rgba(34,211,238,0.12);
+    /* Reflet vitré */
+    filter: brightness(1.15) saturate(1.3);
+}
+/* Liseré néon qui court */
+[data-theme="tokyo"] .btn-ghost::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border: 2px solid #22d3ee;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    animation: border-chase 2s linear infinite;
+    transition: opacity 0.3s;
+}
+[data-theme="tokyo"] .btn-ghost:hover {
+    color: #fff;
+    border-color: rgba(34,211,238,0.80);
+    box-shadow: 0 0 24px rgba(34,211,238,0.35), inset 0 0 12px rgba(34,211,238,0.07);
+}
+[data-theme="tokyo"] .btn-ghost:hover::before { opacity: 1; }
