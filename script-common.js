@@ -177,12 +177,20 @@
 })();
 // ── EMAIL ANTI-SPAM ──
 (function () {
-    const u = 'flagothier.lorenzo';   // partie avant @
-    const d = 'gmail.com';            // ou ton domaine
-    const link = document.getElementById('email-link');
-    const text = document.getElementById('email-text');
-    if (!link || !text) return;
-    const email = u + '@' + d;
-    text.textContent = email;
-    link.href = 'mailto:' + email;
+    function buildEmail() {
+        const u = 'lorenzo.flagothier';
+        const d = 'gmail.com';
+        const link = document.getElementById('email-link');
+        const text = document.getElementById('email-text');
+        if (!link || !text) return;
+        const email = u + '@' + d;
+        text.textContent = email;
+        link.href = 'mailto:' + email;
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', buildEmail);
+    } else {
+        buildEmail();
+    }
 })();
