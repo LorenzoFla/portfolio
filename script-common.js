@@ -80,13 +80,23 @@
 (function () {
     let current = window.scrollY, target = window.scrollY, raf;
 
-    window.addEventListener('wheel', e => {
-        e.preventDefault();
-        target += e.deltaY * 0.9;
-        target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
-        if (!raf) loop();
-    }, { passive: false });
+    // Wheel — passive:false peut être refusé sur certains navigateurs/HTTPS
+    try {
+        window.addEventListener('wheel', e => {
+            e.preventDefault();
+            target += e.deltaY * 0.9;
+            target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
+            if (!raf) loop();
+        }, { passive: false });
+    } catch (err) {
+        window.addEventListener('wheel', e => {
+            target += e.deltaY * 0.9;
+            target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
+            if (!raf) loop();
+        });
+    }
 
+    // Touch
     let touchY = 0;
     window.addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, { passive: true });
     window.addEventListener('touchmove', e => {
@@ -97,18 +107,28 @@
         if (!raf) loop();
     }, { passive: true });
 
-    // ← AJOUT : intercepter les clics sur les liens d'ancre
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const id = a.getAttribute('href');
-            const el = document.querySelector(id);
-            if (!el) return;
-            e.preventDefault();
-            target = el.getBoundingClientRect().top + window.scrollY;
-            target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
-            if (!raf) loop();
+    // Ancres — différé au cas où le DOM ne serait pas encore complet
+    function bindAnchors() {
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href');
+                if (!id || id === '#') return;
+                const el = document.querySelector(id);
+                if (!el) return;
+                e.preventDefault();
+                target = el.getBoundingClientRect().top + window.scrollY;
+                target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
+                if (!raf) loop();
+            });
         });
-    });
+    }
+
+    // DOMContentLoaded au cas où le script s'exécute avant la fin du parsing
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindAnchors);
+    } else {
+        bindAnchors();
+    }
 
     function loop() {
         current += (target - current) * 0.1;
@@ -116,6 +136,14 @@
         else raf = requestAnimationFrame(loop);
         window.scrollTo(0, current);
     }
+
+    // Sync si l'utilisateur scrolle avec la scrollbar native
+    window.addEventListener('scroll', () => {
+        if (!raf) {
+            current = window.scrollY;
+            target  = window.scrollY;
+        }
+    }, { passive: true });
 })();
 
 // ── MAGNETIC HOVER ──
