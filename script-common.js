@@ -79,12 +79,14 @@
 // ── SMOOTH SCROLL CINÉMATIQUE ──
 (function () {
     let current = window.scrollY, target = window.scrollY, raf;
+
     window.addEventListener('wheel', e => {
         e.preventDefault();
         target += e.deltaY * 0.9;
         target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
         if (!raf) loop();
     }, { passive: false });
+
     let touchY = 0;
     window.addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, { passive: true });
     window.addEventListener('touchmove', e => {
@@ -94,6 +96,20 @@
         target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
         if (!raf) loop();
     }, { passive: true });
+
+    // ← AJOUT : intercepter les clics sur les liens d'ancre
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const id = a.getAttribute('href');
+            const el = document.querySelector(id);
+            if (!el) return;
+            e.preventDefault();
+            target = el.getBoundingClientRect().top + window.scrollY;
+            target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
+            if (!raf) loop();
+        });
+    });
+
     function loop() {
         current += (target - current) * 0.1;
         if (Math.abs(target - current) < 0.5) { current = target; raf = null; }
