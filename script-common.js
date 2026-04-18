@@ -175,3 +175,14 @@
     btn.addEventListener('click', () => { sessionStorage.removeItem('lf_theme'); location.reload(); });
     document.body.appendChild(btn);
 })();
+// ── EMAIL ANTI-SPAM ──
+(function () {
+    const u = 'flagothier.lorenzo';   // partie avant @
+    const d = 'gmail.com';            // ou ton domaine
+    const link = document.getElementById('email-link');
+    const text = document.getElementById('email-text');
+    if (!link || !text) return;
+    const email = u + '@' + d;
+    text.textContent = email;
+    link.href = 'mailto:' + email;
+})();
